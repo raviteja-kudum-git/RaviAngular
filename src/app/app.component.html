@@ -3,6 +3,10 @@
   <li><button (click)="LogInClicked()" style="margin-right: 30px;">Log In</button></li>
   <li><button (click)="DashboardClicked()">Dashboard</button></li>
 </ul>
+<br>
+<br>
+<router-outlet></router-outlet>
+<hr>
 <!-- <h2>This is my first angular application..</h2>
 <app-basics></app-basics>
 <h3>{{message}}</h3>
@@ -16,5 +20,4 @@
 <button (click)="MainButtonClicked()" [disabled]="IsDisabled">Main</button>
 <br>
 <button (click)="ChildButtonClicked()" [disabled]="IsDisabled">Child</button> -->
-<router-outlet></router-outlet>
-<hr>
+

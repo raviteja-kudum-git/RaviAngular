@@ -7,6 +7,8 @@ import { BasicsComponent } from './basics/basics.component';
 import { LoginComponent } from './login/login.component';
 import { MystringService } from './mystring.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [MystringService],
   bootstrap: [AppComponent]

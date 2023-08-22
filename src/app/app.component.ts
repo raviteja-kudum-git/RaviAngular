@@ -12,10 +12,14 @@ export class AppComponent {
   //     //title='';
   //     this.title=service.getText();
   // }
-  constructor(private router:Router){
+  title:String='';
+  constructor(private router:Router,public service:MystringService){
+      
+      this.title=service.getText();
+      
 
   }
-  title = 'AngularBasics';
+  //title = 'AngularBasics';
   message='This is string interpolation.'
   IsDisabled:boolean=false;
   ButtonClicked(){

@@ -1,9 +1,20 @@
 <h2 style="text-align: center;">User Log In</h2>
 <hr>
 <br>
+<div class="form-group">
+<form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
 <label id="username">Username:</label>
-<input type="text" id="username" width="40px">
+<input type="text" id="username" name="username" width="40px" class="form-control" ngModel>
 <br>
 <br>
 <label id="password">Password:</label>
-<input type="text" id="password" width="40px" type="password">
+<input type="text" class="form-control" id="password" name="password" width="40px" type="password" ngModel>
+<br>
+<br>
+<input type="submit" value="Submit" style="margin-left: 60px;" class="form-control">
+</form>
+</div>
+<div>
+    <h2>{{username}}</h2>
+    <h2>{{password}}</h2>
+</div>
