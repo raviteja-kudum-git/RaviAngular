@@ -16,6 +16,7 @@ export class MystringService {
     {name:'IPhone 9',description:'Excellent to use',price:'20000'}
     
         ]
+    
     public getText(){
      return 'New Dashboard';
   }
