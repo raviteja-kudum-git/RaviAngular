@@ -9,6 +9,7 @@ import { MystringService } from './mystring.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import{HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [MystringService],
   bootstrap: [AppComponent]

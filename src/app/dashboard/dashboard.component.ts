@@ -12,10 +12,16 @@ import { OnInit } from '@angular/core';
 })
  
 export class DashboardComponent implements OnInit {
+  responseData:any;
   List=["Item1","Item2"];
   ListO:Observable<string[]>=of(this.List);
   lis:string[]=[];
   ngOnInit():void{
+    this.service.getDummyData().subscribe(
+      (data)=>{this.responseData=data;},
+      (error)=>{console.error('Error:',error)}
+      );
+    
       const Subscription=this.ListO.subscribe({
         next:(data)=>{this.lis=data},
         error:()=>console.log('error occured')

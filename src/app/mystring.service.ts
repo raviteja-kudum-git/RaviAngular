@@ -1,9 +1,17 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class MystringService {
+private apiUrl='https://dummyjson.com/products';
+constructor(private http:HttpClient){
+  
+ }
+ getDummyData():Observable<any>{
+  const Newurl='${this.apiUrl}/https://dummyjson.com/products';
+  return this.http.get(Newurl);}
 
   Items=[
     {name:'IPhone 14 Pro Max',description:'Excellent to use',price:'90000'},
